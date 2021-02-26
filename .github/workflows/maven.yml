@@ -23,7 +23,7 @@ jobs:
       run: mvn compile
   
   test:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     name: Running tests
     needs: compile
     steps:
