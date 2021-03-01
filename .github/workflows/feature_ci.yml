@@ -5,9 +5,11 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ test-workflow-prateek ]
+    branches-ignore:
+      - 'master'
+      - 'dev'
   pull_request:
-    branches: [ master ]
+    branches: [ dev ]
 
 jobs:
   compile:
