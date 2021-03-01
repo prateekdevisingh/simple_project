@@ -6,6 +6,8 @@ name: Java CI with Maven
 on:
   push:
     branches: [ test-workflow-prateek ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   compile:
