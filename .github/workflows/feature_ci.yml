@@ -57,6 +57,9 @@ jobs:
     - name: docker build java
       run: |
         docker build -t prateek/springboot-demo:1.0.0 .
+    - name: docker tag
+      run: |
+        docker tag prateek/springboot-demo:1.0.0 xi2206/prateekrepo:myfirstpush-1.0.0
     - name: docker push
       run: |
-        docker push prateek/springboot-demo:1.0.0 
+        docker push xi2206/prateekrepo:myfirstpush-1.0.0 
