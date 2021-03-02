@@ -56,5 +56,5 @@ jobs:
       run: mvn clean install
     - name: docker build java
       run: |
-        docker build . prateek/springboot-demo:1.0.0
+        docker build -t prateek/springboot-demo:1.0.0 .
     
