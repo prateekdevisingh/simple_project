@@ -1,11 +1,11 @@
 #!/bin/bash 
 echo 'Starting to Deploy...'
 ssh ubuntu@18.216.139.184
-DIR="/home/ubuntu/test_dir"
+DIR="/tmp/test_dir"
 if [ -d "$DIR" ]; then
   echo 'dir present"'
 else
   echo 'making new dir'
-  mkdir $DIR
+  mkdir -p $DIR
 fi
 echo 'Deployment completed successfully'
