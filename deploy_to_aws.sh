@@ -6,6 +6,6 @@ if [ -d "$DIR" ]; then
   echo 'dir present"'
 else
   echo 'making new dir'
-  mkdir -p $DIR
+  sudo mkdir /tmp/test_dir
 fi
 echo 'Deployment completed successfully'
