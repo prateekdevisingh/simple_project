@@ -63,3 +63,4 @@ jobs:
     - name: docker push
       run: |
         docker push xi2206/prateekrepo:myfirstpush-1.0.0 
+        
