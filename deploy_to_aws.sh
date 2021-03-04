@@ -1,7 +1,7 @@
 #!/bin/bash 
 echo 'Starting to Deploy...'
 ssh ubuntu@18.216.139.184
-DIR="/root/test_dir"
+DIR="/home/ubuntu/test_dir"
 if [ -d "$DIR" ]; then
   echo 'dir present"'
 else
