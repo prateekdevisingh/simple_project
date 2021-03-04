@@ -7,5 +7,5 @@ if [ -d "$DIR" ]; then
 else
   echo "making new dir"
   mkdir $DIR
-if
+fi
 echo 'Deployment completed successfully'
