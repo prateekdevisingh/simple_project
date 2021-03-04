@@ -1,6 +1,6 @@
 #!/bin/bash 
 echo 'Starting to Deploy...'
-ssh ubuntu@18.216.139.184
+ssh ubuntu@18.216.139.184 "sudo mkdir -p /tmp/test"
 DIR="/tmp/test_dir"
 if [ -d "$DIR" ]; then
   echo 'dir present"'
