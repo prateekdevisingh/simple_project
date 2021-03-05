@@ -62,7 +62,13 @@ jobs:
         docker tag prateek/springboot-demo:1.0.0 xi2206/prateekrepo:myfirstpush-1.0.0
     - name: docker push
       run: |
-        docker push xi2206/prateekrepo:myfirstpush-1.0.0 
+        docker push xi2206/prateekrepo:myfirstpush-1.0.0
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
+      with:
+          key: ${{ secrets.SSH_KEY }}
+          name: id_rsa
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}    
     - name: rsync over ssh
       run: |
          ./deploy_to_aws.sh
