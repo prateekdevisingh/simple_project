@@ -62,13 +62,13 @@ jobs:
         docker tag prateek/springboot-demo:1.0.0 xi2206/prateekrepo:myfirstpush-1.0.0
     - name: docker push
       run: |
-        docker push xi2206/prateekrepo:myfirstpush-1.0.0 
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
+        docker push xi2206/prateekrepo:myfirstpush-1.0.0
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-2
+          key: ${{ secrets.SSH_KEY }}
+          name: id_rsa
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}    
     - name: rsync over ssh
       run: |
          ./deploy_to_aws.sh
