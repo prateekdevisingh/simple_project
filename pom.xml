@@ -28,11 +28,11 @@
             </plugin>
         </plugins>
     </build>
-    <distributionManagement>
+<distributionManagement>
   
   <repository>
     <id>github</id>
-    <name>simple pckg</name>
+    <name>sample app packg</name>
     <url>https://maven.pkg.github.com/prateekdevisingh/simple_project</url> 
   </repository>
 </distributionManagement>
